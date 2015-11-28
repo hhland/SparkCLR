@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.4\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <Private>True</Private>
     </Reference>
@@ -49,6 +53,7 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="DataFrameSamples.cs" />
     <Compile Include="DStreamSamples.cs" />
+    <Compile Include="Env.cs" />
     <Compile Include="MiscSamples.cs" />
     <Compile Include="DoubleRDDSamples.cs" />
     <Compile Include="Program.cs" />
@@ -69,6 +74,7 @@
     <None Include="data\order.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -42,12 +42,14 @@ namespace Microsoft.Spark.CSharp.Samples
                 RunSamples();
                 SparkContext.Stop();
             }
+            System.Console.ReadLine();
         }
 
         // Creates and returns a context
         private static SparkContext CreateSparkContext()
         {
-            var conf = new SparkConf();
+            var conf = new SparkConf() { };
+            conf.SetMaster(Env.SPARK_MASTER_URL);
             if (Configuration.SparkLocalDirectoryOverride != null)
             {
                 conf.Set("spark.local.dir", Configuration.SparkLocalDirectoryOverride);

@@ -17,7 +17,7 @@ namespace AdapterTest
         [TestMethod]
         public void TestStreamingContext()
         {
-            var ssc = new StreamingContext(new SparkContext("", ""), 1000);
+            var ssc = new StreamingContext(new SparkContext(Env.SPARK_MASTER_URL, "xxxx"), 1000);
             Assert.IsNotNull((ssc.streamingContextProxy as MockStreamingContextProxy));
 
             ssc.Start();

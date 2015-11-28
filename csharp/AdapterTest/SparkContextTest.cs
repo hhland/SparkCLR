@@ -24,7 +24,7 @@ namespace AdapterTest
         [TestMethod]
         public void TestSparkContextProxy()
         {
-            var sparkContext = new SparkContext("masterUrl", "appName");
+            var sparkContext = new SparkContext(Env.SPARK_MASTER_URL, "appName");
             sparkContext.AddFile(null);
             sparkContext.BinaryFiles(null, null);
             sparkContext.CancelAllJobs();
